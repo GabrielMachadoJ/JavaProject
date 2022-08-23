@@ -1,0 +1,14 @@
+package controllers;
+
+import java.math.BigDecimal;
+
+public class ProductController {
+	
+	
+	private void handleCreateNewRegister(String productDescription, String date, BigDecimal purchasePrice, String suppliersName) {
+		
+	}
+	
+	
+
+}

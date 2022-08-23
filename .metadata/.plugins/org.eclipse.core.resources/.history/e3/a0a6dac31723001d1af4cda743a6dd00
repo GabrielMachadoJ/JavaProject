@@ -1,0 +1,25 @@
+package controllers;
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+
+import classes.Product;
+
+public class ProductController {
+	
+	ArrayList<Product> products = new ArrayList<>(); 
+	
+	
+	private void handleCreateNewRegister(String productDescription, String date, BigDecimal purchasePrice, String suppliersName) {
+		Product product = new Product();
+		product.setProductDescription(productDescription);
+		product.setPurchasePrice(purchasePrice);
+		product.setDate(date);
+		product.setSuppliersName(suppliersName);
+		
+		products.add(product);
+	}
+	
+	
+
+}

@@ -1,0 +1,48 @@
+package classes;
+
+import java.math.BigDecimal;
+
+public class Product {
+	
+	private String productDescription;
+	private String date;
+	private BigDecimal purchasePrice;
+	private String suppliersName;
+	
+	
+	public Product(String productDescription, String date, BigDecimal purchasePrice, String suppliersName) {
+		this.productDescription = productDescription;
+		this.date = date;
+		this.purchasePrice = purchasePrice;
+		this.suppliersName = suppliersName;
+	}
+	
+	public String getProductDescription() {
+		return productDescription;
+	}
+	public void setProductDescription(String productDescription) {
+		this.productDescription = productDescription;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public BigDecimal getPurchasePrice() {
+		return purchasePrice;
+	}
+	public void setPurchasePrice(BigDecimal purchasePrice) {
+		this.purchasePrice = purchasePrice;
+	}
+	public String getSuppliersName() {
+		return suppliersName;
+	}
+	public void setSuppliersName(String suppliersName) {
+		this.suppliersName = suppliersName;
+	}
+	
+	
+	
+
+}

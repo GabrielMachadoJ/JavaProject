@@ -1,0 +1,77 @@
+package views;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JSeparator;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+
+public class Home extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Home frame = new Home();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Home() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 567, 414);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Autopeças");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setFont(new Font("SansSerif", Font.PLAIN, 18));
+		lblNewLabel.setBounds(201, 11, 153, 34);
+		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Cadastrar");
+		btnNewButton.setFont(new Font("Nirmala UI Semilight", Font.PLAIN, 18));
+		btnNewButton.setBounds(381, 77, 105, 26);
+		contentPane.add(btnNewButton);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(57, 129, 445, 235);
+		contentPane.add(textPane);
+		
+		textField = new JTextField();
+		textField.setBounds(57, 81, 166, 26);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton_1 = new JButton("Buscar");
+		btnNewButton_1.setBounds(233, 81, 65, 26);
+		contentPane.add(btnNewButton_1);
+	}
+}

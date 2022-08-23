@@ -1,0 +1,80 @@
+package views;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.JSeparator;
+import javax.swing.JTable;
+import javax.swing.JTextPane;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import java.awt.Color;
+import java.awt.SystemColor;
+import javax.swing.UIManager;
+
+public class Product extends JFrame {
+
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Product frame = new Product();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Product() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 300, 414);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("Salvar");
+		btnNewButton.setBackground(Color.LIGHT_GRAY);
+		btnNewButton.setFont(new Font("Nirmala UI Semilight", Font.PLAIN, 18));
+		btnNewButton.setBounds(10, 310, 120, 40);
+		contentPane.add(btnNewButton);
+		
+		JButton btnListar_1_1 = new JButton("Sair");
+		btnListar_1_1.setForeground(Color.WHITE);
+		btnListar_1_1.setBackground(Color.DARK_GRAY);
+		btnListar_1_1.setFont(new Font("Nirmala UI Semilight", Font.PLAIN, 18));
+		btnListar_1_1.setBounds(154, 310, 120, 40);
+		contentPane.add(btnListar_1_1);
+		
+		JSeparator separator = new JSeparator();
+		separator.setForeground(Color.BLACK);
+		separator.setBackground(Color.BLACK);
+		separator.setBounds(10, 77, 264, 1);
+		contentPane.add(separator);
+		
+		JLabel lblProdutos = new JLabel("Produtos");
+		lblProdutos.setHorizontalAlignment(SwingConstants.CENTER);
+		lblProdutos.setFont(new Font("SansSerif", Font.BOLD, 18));
+		lblProdutos.setBounds(71, 32, 132, 34);
+		contentPane.add(lblProdutos);
+	}
+}
