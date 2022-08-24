@@ -3,6 +3,8 @@ package views;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -11,8 +13,8 @@ import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+
+import controllers.ProductController;
 
 public class Home extends JFrame {
 
@@ -58,7 +60,7 @@ public class Home extends JFrame {
 		JButton btnRegister = new JButton("Cadastrar");
 		btnRegister.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Product viewProduct = new Product();
+				ViewProduct viewProduct = new ViewProduct();
 				viewProduct.setVisible(true);
 				setVisible(false);
 			}
@@ -69,6 +71,12 @@ public class Home extends JFrame {
 		contentPane.add(btnRegister);
 		
 		JButton btnListar = new JButton("Listar");
+		btnListar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ProductController produto = new ProductController();
+				System.out.println(ProductController.products.size());
+			}
+		});
 		btnListar.setBackground(Color.LIGHT_GRAY);
 		btnListar.setFont(new Font("Nirmala UI Semilight", Font.PLAIN, 18));
 		btnListar.setBounds(71, 142, 132, 40);

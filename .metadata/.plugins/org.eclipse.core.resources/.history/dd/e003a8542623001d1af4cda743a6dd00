@@ -1,0 +1,29 @@
+package controllers;
+
+import java.util.ArrayList;
+
+import javax.swing.JOptionPane;
+
+import classes.Product;
+
+public class ProductController {
+	
+	ArrayList<Product> products = new ArrayList<>(); 
+	
+	
+	public void handleCreateNewRegister(String productDescription, String date, Double purchasePrice, String suppliersName) {
+		Product product = new Product();
+		
+		if(productDescription.equals(null) || productDescription.isEmpty()) {
+			JOptionPane.showMessageDialog(null, "Descrição invalida");
+		}else if() {
+			
+		}
+		product.setProductDescription(productDescription);
+		product.setPurchasePrice(purchasePrice);
+		product.setDate(date);
+		product.setSuppliersName(suppliersName);
+		
+		products.add(product);
+	}
+}

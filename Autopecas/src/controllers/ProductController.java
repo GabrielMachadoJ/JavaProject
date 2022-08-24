@@ -2,23 +2,44 @@ package controllers;
 
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 import classes.Product;
 
 public class ProductController {
-	
-	ArrayList<Product> products = new ArrayList<>(); 
-	
-	
-	public void handleCreateNewRegister(String productDescription, String date, Double purchasePrice, String suppliersName) {
-		Product product = new Product();
-		product.setProductDescription(productDescription);
-		product.setPurchasePrice(purchasePrice);
-		product.setDate(date);
-		product.setSuppliersName(suppliersName);
-		
-		products.add(product);
-	}
-	
-	
 
+	public static ArrayList<Product> products = new ArrayList<Product>();
+
+	public void handleCreateNewRegister(String productDescription, String date, Double purchasePrice, String suppliersName) {
+		int tamanho = productDescription.length();
+		Product product = new Product();
+
+		if (tamanho >= 2 && tamanho <= 50) {
+			if (products.size() > 0) {
+				for (Product produto : products) {
+					if (productDescription.equals(produto.getProductDescription())) {
+						JOptionPane.showInternalMessageDialog(null, "Já contém um produto com essa descrição");
+					} else {
+						product.setProductDescription(productDescription);
+						product.setPurchasePrice(purchasePrice);
+						product.setDate(date);
+						product.setSuppliersName(suppliersName);
+					}
+				}
+			} else {
+				product.setProductDescription(productDescription);
+				product.setPurchasePrice(purchasePrice);
+				product.setDate(date);
+				product.setSuppliersName(suppliersName);
+				
+				System.out.println(product.getProductDescription());
+				
+			}
+		} else {
+			JOptionPane.showMessageDialog(null, "Descrição invalida");
+
+		}
+		products.add(product);
+		System.out.println(products.size());
+	}
 }

@@ -7,16 +7,16 @@ public class Product {
 	private Double purchasePrice;
 	private String suppliersName;
 	
-	
-	public Product() {
-	}
-	
+
 	public Product(String productDescription, String date, Double purchasePrice, String suppliersName) {
 		this.productDescription = productDescription;
 		this.date = date;
 		this.purchasePrice = purchasePrice;
 		this.suppliersName = suppliersName;
 	}
+	public Product() {
+	}
+	
 	
 	public String getProductDescription() {
 		return productDescription;

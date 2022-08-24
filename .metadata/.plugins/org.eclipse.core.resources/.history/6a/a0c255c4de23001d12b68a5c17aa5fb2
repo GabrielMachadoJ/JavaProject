@@ -1,0 +1,12 @@
+package classes;
+
+import java.util.ArrayList;
+
+public class Teste {
+	
+	ArrayList<String> teste = new ArrayList<String>();
+	
+	String texto = "texto";
+	teste.add
+
+}
